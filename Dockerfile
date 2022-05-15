@@ -12,7 +12,7 @@ RUN ${HOME}/.cargo/bin/cargo install -f cargo-fuzz
 ADD . /nixpkgs-fmt-mayhem
 WORKDIR /nixpkgs-fmt-mayhem
 
-RUN ${HOME}/.cargo/bin/cargo fuzz build --features=libfuzzer-sys --debug-assertions fmt
+RUN ${HOME}/.cargo/bin/cargo fuzz build --debug-assertions fmt
 
 # Package Stage
 FROM ubuntu:20.04
