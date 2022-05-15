@@ -17,4 +17,4 @@ RUN ${HOME}/.cargo/bin/cargo fuzz build --debug-assertions fmt
 # Package Stage
 FROM ubuntu:20.04
 
-COPY --from=builder nixpkgs-fmt-mayhem/fuzz/x86_64-unknown-linux-gnu/release/* /
+COPY --from=builder nixpkgs-fmt-mayhem/fuzz/target/x86_64-unknown-linux-gnu/release/* /
